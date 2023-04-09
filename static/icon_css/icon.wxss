@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3970136 */
+  src: url('//at.alicdn.com/t/c/font_3970136_zt9gy3ykxs.woff2?t=1680338521027') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3970136_zt9gy3ykxs.woff?t=1680338521027') format('woff'),
+       url('//at.alicdn.com/t/c/font_3970136_zt9gy3ykxs.ttf?t=1680338521027') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wodehaoyou:before {
+  content: "\e628";
+}
+
+.icon-wodexiaoxi:before {
+  content: "\e62f";
+}
+
+.icon-yifu:before {
+  content: "\e666";
+}
+
+.icon-geren1:before {
+  content: "\e611";
+}
+
+.icon-geren:before {
+  content: "\e60f";
+}
+
+.icon-zhuye:before {
+  content: "\e603";
+}
+
+.icon-shipin:before {
+  content: "\e640";
+}
+
+.icon-shouye:before {
+  content: "\e612";
+}
+
+.icon-tubiao-zhuzhuangtu:before {
+  content: "\e6db";
+}
+
+.icon-zhibo:before {
+  content: "\e6ab";
+}
+
+.icon-yinleliebiao:before {
+  content: "\e674";
+}
+
+.icon-diantai:before {
+  content: "\e605";
+}
+

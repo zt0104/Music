@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<!-- <text>pages/login/login.wxml</text> -->
+<!-- <img id="qrImg" src="http://usr/file_base64src.png" style="width: 200rpx;height: 200rpx;" /> -->
+<view class="center">
+  <image id="qrImg"   src="{{srcImg}}" style="width: 300rpx;height: 300rpx;"       mode=""/>
+  <div id="info" class="info"></div>
+
+  <button id="用户" bindtap="btn">扫码,验证登录</button>
+  <button id="游客" bindtap="btn">游客,验证登录</button>
+  <button bindtap="ckRg">验证Cookie</button>
+ 
+</view>

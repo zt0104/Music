@@ -1,0 +1,9 @@
+<!--components/Repush.wxml-->
+<!-- <text>components/Repush.wxml</text> -->
+<view class="rcss">
+  <text class="tuijian">{{rname}}</text>
+ <view class="heart-A">
+   <text>{{rtext}}</text>
+   <text class="more">查看更多</text>
+ </view>
+</view>

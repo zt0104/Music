@@ -1,0 +1,7 @@
+/* 全局样式 */
+@import '/static/icon_css/icon.wxss';
+
+pages{
+  height: 100%;
+ 
+}
