@@ -9,3 +9,6 @@
 image{
   margin-bottom: 50rpx;
 }
+.outLogin{
+  margin-top: 50rpx;
+}

@@ -16,10 +16,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   async onLoad(options) {
-
+    
     let bannerListData=  await request('/banner',{type:2})
   
     let recommanedListData = await request('/personalized','GET',{limit:5})
+    this.setData({
+      bannerList : bannerListData.banners.slice(0,4) , 
+      recommanedList : recommanedListData.result.slice(0,6),
+      
+    })
     let index=0;
     let topListData = await request('/toplist','GET',{idx:index++})
      /* 取四项数据 */
@@ -38,16 +43,11 @@ Page({
         // console.log(detailList);
       }
 
-
-
-    
-    this.setData({
-    bannerList : bannerListData.banners.slice(0,4) , 
-    recommanedList : recommanedListData.result.slice(0,6),
-    
-  })
-  
-
+  },
+  toRecommend(){
+    wx.navigateTo({
+      url: '/pages/Recommend/Recommend',
+    })
 
   },
 

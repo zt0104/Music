@@ -28,15 +28,18 @@ Page({
   onLoad(options) {
     // 获取历史播放记录
     
-   let userInfo = wx.getStorageSync('userinfo')
-   this.setData({
-    userInfo:JSON.parse(userInfo)
-   })
-   this.test()
-   this.historyData()
-  //  if(this.userInfo.account!=''){
-  //   this.historyData()
-  //  }
+   if(wx.getStorageSync('userinfo')!=''){
+    let userInfo = wx.getStorageSync('userinfo')
+    this.setData({
+     userInfo:JSON.parse(userInfo)
+    })
+    this.historyData()
+
+    // 用于返回数据时, "我的"数据未更新
+
+   }
+   
+   
   },
   
   HandletouchStart(e){
@@ -47,7 +50,6 @@ Page({
     })
   },
   HandletouchMove(e){
-  
    moveY = e.touches[0].clientY
    distance = moveY - startY
    if(distance<0){
@@ -75,15 +77,10 @@ Page({
       url: '/pages/login/login',
     })
  },
-  test(){
-
-
-  //  console.log(this.data.userInfo);
-  //  console.log(this.data.userInfo.account);
-  },
+ 
  /* 最近历史播放 weekdata */
    async historyData(){
-     let hsDataList = []
+    //  let hsDataList = []
     timestamp = Date.now()
       let hsData = await request('/user/record?uid='+this.data.userInfo.account.id+'&type=1&'+timestamp,'GET')
       let{ weekData } = hsData
@@ -96,9 +93,13 @@ Page({
       this.setData({
         hsDataList :weekDatas
       })
+  
+
     },
+  
 
-
+    /* 刷新"我的"数据 */
+   
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -110,8 +111,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
-  },
+    
+    },
 
   /**
    * 生命周期函数--监听页面隐藏

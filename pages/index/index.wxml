@@ -6,12 +6,12 @@
 easing-function="default"
 >
   <swiper-item wx:for="{{bannerList}}" wx:key="targetId" >
-   <image src="{{item.pic}}" mode=""/>
+   <image 	lazy-load src="{{item.pic}}" mode=""/>
   </swiper-item>
 </swiper>
 <!-- recommed -->
 <view class="recommed">
- <view class="r_item">
+ <view class="r_item" bindtap="toRecommend">
    <text class="iconfont icon-shouye"></text>
    <text>每日推荐</text>
  </view>
@@ -41,7 +41,7 @@ easing-function="default"
 <!-- scroll-view -->
 <scroll-view 	enable-flex	scroll-x>
 <view wx:for="{{recommanedList}}" wx:key="id"  class="scroll-item">
-  <image src="{{item.picUrl}}" mode=""/>
+  <image 	lazy-load src="{{item.picUrl}}" mode=""/>
   <text>{{item.name}}</text>
 </view>
 </scroll-view>
@@ -54,7 +54,7 @@ easing-function="default"
         <view class="swiperItem">
           <view class="title">{{item.name}} ></view>
           <view class="musicItem" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="musicItem">
-            <image src="{{musicItem.al.picUrl}}"></image>
+            <image 	lazy-load src="{{musicItem.al.picUrl}}"></image>
             <text class="count">{{index + 1}}</text>
             <text class="musicName">{{musicItem.al.name}}</text>
           </view>
