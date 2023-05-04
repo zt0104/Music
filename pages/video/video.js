@@ -15,19 +15,15 @@ Page({
     isTriggle:'',
     scrollTop:0
     
-    // movetop:''
-    // cookie:''
   },
-  // onPageScroll(scrollTop){
-  //   console.log(scrollTop);
-  // },
+ 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
     this.getvideogroupList()
     this.setData({
-      // cookie:wx.getStorageSync('cookie')
+    
     })
   },
   
@@ -52,6 +48,7 @@ Page({
      let isTriggle=false
       let videoGroupData=[]
       let  index =0
+     
       videoGroup.datas.map(item =>
         item.id = index++
       )

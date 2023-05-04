@@ -1,7 +1,7 @@
 <!--pages/index/index.wxml-->
 <view >
 <!-- swiper模块 -->
-<swiper  	indicator-dots 	autoplay 	indicator-color="#ecf2f0"
+<swiper  	indicator-dots 	autoplay 		circular indicator-color="#ecf2f0"
  indicator-active-color="#c24435"
 easing-function="default"
 >
