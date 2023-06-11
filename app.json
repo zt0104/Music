@@ -1,11 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/search/search",
     "pages/Recommend/Recommend",
-    
     "pages/video/video",
     "pages/login/login",
     "pages/my/my"
+    
   ],
   "usingComponents": {
     "Repush": "/components/Repush/Repush"

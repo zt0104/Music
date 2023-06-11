@@ -2,7 +2,7 @@
   <!-- 头部区域 -->
   <view class="header">
     <image src="/static/images/video/video.jpg" mode=""></image>
-    <view class="search">
+    <view class="search" bindtap="tosearch">
       搜索音乐
     </view>
     <image src="/static/images/logo.png" mode=""></image>

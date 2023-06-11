@@ -5,8 +5,9 @@
   <view class="header">
     <image src="/static/images/recommendSong/recommendSong.jpg"></image>
     <view class="date">
-      <text class="day">{{day}} / </text>
-      <text class="month">{{month}}</text>
+      <text class="month">{{month}} /</text>
+      <text class="day">{{day}} </text>
+     
     </view>
   </view>
   <!-- 播放全部 -->

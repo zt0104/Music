@@ -26,7 +26,11 @@ Page({
     
     })
   },
-  
+  tosearch(){
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
    async getvideogroupList (e){
     let videogroupList = await request('/video/group/list')
     let {data} =videogroupList
